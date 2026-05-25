@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Reservas SPA</title>
+</head>
+
+<body>
+
+<h1>Reservas</h1>
+
+<div id="reservas"></div>
+
+<script>
+
+fetch('http://localhost:3000/api/reservas')
+
+.then(res => res.json())
+
+.then(data => {
+
+  let html = '';
+
+  data.forEach(r => {
+
+    html += `
+      <div>
+        <h3>${r.nombre}</h3>
+        <p>${r.email}</p>
+        <p>${r.fecha}</p>
+        <p>${r.hora}</p>
+        <p>${r.servicio}</p>
+        <hr>
+      </div>
+    `;
+
+  });
+
+  document.getElementById('reservas').innerHTML = html;
+
+});
+
+</script>
+
+</body>
+</html>
