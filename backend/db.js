@@ -13,11 +13,10 @@ module.exports = connection;
 db.connect(err => {
 
    if (err) {
-    console.log(err);
+    console.log('Error conexión MySQL:', err);
   } else {
     console.log('Conectado a Railway MySQL');
   }
-
 });
 
 module.exports = db;
