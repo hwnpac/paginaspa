@@ -12,6 +12,6 @@ app.use(express.json());
 
 app.use('/api', routes);
 
-app.listen(3000, () => {
-  console.log('Servidor activo http://localhost:3000');
+app.listen(PORT, () => {
+  console.log("Servidor corriendo en puerto " + PORT);
 });
