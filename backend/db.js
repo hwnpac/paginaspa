@@ -12,12 +12,11 @@ module.exports = connection;
 
 db.connect(err => {
 
-  if (err) {
-    console.log('Error conectando MySQL:', err);
-    return;
+   if (err) {
+    console.log(err);
+  } else {
+    console.log('Conectado a Railway MySQL');
   }
-
-  console.log('Conectado a MySQL');
 
 });
 
