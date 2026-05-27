@@ -78,7 +78,7 @@ router.post('/reservar', (req, res) => {
       servicio
     ];
 
-    db.query(sql, valores, (err, result) => {
+    connection.query(sql, valores, (err, result) => {
 
       // =========================
       // ERROR MYSQL
