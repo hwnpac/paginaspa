@@ -49,6 +49,8 @@ function reservar() {
 
   .then(data => {
 
+    console.log(data);
+
     alert(data.mensaje);
 
     // LIMPIAR FORMULARIO
